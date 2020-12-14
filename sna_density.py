@@ -14,5 +14,6 @@ rows, cols = np.where(adjacency == 1)
 edges = zip(rows.tolist(), cols.tolist())
 gr = nx.Graph(adjacency)
 gr.add_edges_from(edges)
+print(f"Edges: {len(gr.edges)}")
 print(f"Density: {nx.density(gr)}")
 
